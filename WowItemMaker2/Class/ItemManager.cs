@@ -69,7 +69,8 @@ namespace WowItemMaker2
             sb.Append("UPDATE " + this.tableName + " SET ");
             foreach (ItemProperty p in item.Properties)
             {
-                sb.Append(p.Name + "='" + p.Value.Replace("'", "''") + "',");
+                if (p != null)
+                    sb.Append(p.Name + "=" + (p.Value == null ? "null" : ("'" + p.Value.Replace("'", "''") + "'")) + ",");
             }
             sb.Remove(sb.Length - 1, 1);
             sb.Append(" WHERE " + this.idField + "='" + item.getProperty(this.idField).Value.Replace("'", "''") + "';");
