@@ -1,0 +1,32 @@
+﻿<Window x:Class="WowItemMaker2.Window_About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="关于" Height="290" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/WowItemMaker2;component/Resources/BackgroundDownloader.ICO">
+    <Grid Margin="5">
+        <Image Source="/WowItemMaker2;component/Resources/logo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Height="45" Margin="10"/>
+        <Grid Margin="10,55,10,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="版本" />
+            <Label Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="作者" />
+            <Label Grid.Column="0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="QQ" />
+            <Label Grid.Column="0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="Email" />
+            <Label Grid.Column="0" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="QQ群" />
+            <Label Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Name="LB_version" />
+            <Label Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="ggkk0818" />
+            <Label Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="317323134" />
+            <Label Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="ggkk0818@sina.com" />
+            <Label Grid.Column="1" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="25" Content="89330918" />
+        </Grid>
+        <Button Content="确定" Height="23" HorizontalAlignment="Right" Margin="0,0,10,5" Name="btn_ok" VerticalAlignment="Bottom" Width="75" Click="btn_ok_Click" />
+    </Grid>
+</Window>

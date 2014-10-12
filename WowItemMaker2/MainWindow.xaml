@@ -1,0 +1,79 @@
+﻿<Window x:Class="WowItemMaker2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gifLib="clr-namespace:GifImageLib;assembly=GifImageLib"
+        Title="WOWItemMaker beta 2" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/WowItemMaker2;component/Resources/BackgroundDownloader.ICO">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid Name="Grid1">
+        <Menu Height="25" Name="menu1" Width="Auto" DataContext="{Binding}" Margin="0,0,0,388" VerticalAlignment="Top">
+            <MenuItem Header="文件">
+                <MenuItem Name="menu_conn" Header="连接" Click="menu_conn_Click" />
+                <Separator></Separator>
+                <MenuItem Name="menu_quit" Header="退出" Click="menu_quit_Click" />
+            </MenuItem>
+            <MenuItem Header="工具">
+                <MenuItem Name="menu_patch" Header="问号补丁" Click="menu_patch_Click" />
+                <MenuItem Name="menu_setting" Header="选项" IsEnabled="False" />
+            </MenuItem>
+            <MenuItem Header="关于">
+                <MenuItem Name="menu_help" Header="帮助" Click="menu_help_Click" IsEnabled="False" />
+                <MenuItem Name="menu_about" Header="关于" Click="menu_about_Click" />
+            </MenuItem>
+        </Menu>
+        <Button Name="btn_add" Width="75" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,55,0,0" Click="btn_add_Click" >
+            <Grid Width="45">
+                <Image Source="/WowItemMaker2;component/Resources/addIcon.png" HorizontalAlignment="Left"/>
+                <TextBlock Text="添加" HorizontalAlignment="Right" />
+            </Grid>
+        </Button>
+        <Button Name="btn_edit" Width="75" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="85,55,0,0" Click="btn_edit_Click" IsEnabled="False" >
+            <Grid Width="45">
+                <Image Source="/WowItemMaker2;component/Resources/modifyIcon.png" HorizontalAlignment="Left"/>
+                <TextBlock Text="修改" HorizontalAlignment="Right" />
+            </Grid>
+        </Button>
+        <Button Name="btn_del" Width="75" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="165,55,0,0" Click="btn_del_Click" IsEnabled="False" >
+            <Grid Width="45">
+                <Image Source="/WowItemMaker2;component/Resources/deleteIcon.png" HorizontalAlignment="Left"/>
+                <TextBlock Text="删除" HorizontalAlignment="Right" />
+            </Grid>
+        </Button>
+        <DataGrid AutoGenerateColumns="False" Margin="0,80,0,30" Name="dataGrid1" ItemsSource="{Binding}" 
+                  Hyperlink.Click="DataGridHyperlinkColumn_Click" AlternatingRowBackground="AliceBlue" 
+                  AlternationCount="2" CanUserAddRows="False" CanUserDeleteRows="False" SelectedValuePath="entry" SelectionChanged="dataGrid1_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding entry}" IsReadOnly="True"  />
+                <DataGridTextColumn Header="名称" Binding="{Binding name}" IsReadOnly="True"  Width="*" />
+                <DataGridTextColumn Header="类型" Binding="{Binding class}" IsReadOnly="True"  />
+                <DataGridTextColumn Header="子类型" Binding="{Binding subclass}" IsReadOnly="True"  />
+                <DataGridHyperlinkColumn Binding="{Binding editColumn}" IsReadOnly="True"  Width="40" />
+                <DataGridHyperlinkColumn Binding="{Binding delColumn}" IsReadOnly="True"  Width="40" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btn_first" Height="23" Width="23" HorizontalAlignment="Left" Margin="5,0,0,4" VerticalAlignment="Bottom" Click="btn_first_Click" IsEnabled="False">
+            <Image Source="/WowItemMaker2;component/Resources/page-first.gif"/>
+        </Button>
+        <Button Name="btn_prev" Height="23" Width="23" HorizontalAlignment="Left" Margin="33,0,0,4" VerticalAlignment="Bottom" Click="btn_prev_Click" IsEnabled="False">
+            <Image Source="/WowItemMaker2;component/Resources/page-prev.gif"/>
+        </Button>
+        <Button Name="btn_next" Height="23" Width="23" HorizontalAlignment="Left" Margin="61,0,0,4" VerticalAlignment="Bottom" Click="btn_next_Click" IsEnabled="False">
+            <Image Source="/WowItemMaker2;component/Resources/page-next.gif"/>
+        </Button>
+        <Button Name="btn_last" Height="23" Width="23" HorizontalAlignment="Left" Margin="89,0,0,4" VerticalAlignment="Bottom" Click="btn_last_Click" IsEnabled="False">
+            <Image Source="/WowItemMaker2;component/Resources/page-last.gif"/>
+        </Button>
+        <TextBox Name="TB_page" Height="23" Width="50" HorizontalAlignment="Left" Margin="117,0,0,4" VerticalAlignment="Bottom" FontSize="13" Text="0" HorizontalContentAlignment="Center" KeyDown="TB_page_KeyDown" />
+        <Label Name="LB_page" Height="25" Width="50" HorizontalAlignment="Left" Margin="167,0,0,4" VerticalAlignment="Bottom" Content="/0" VerticalContentAlignment="Center"  FontSize="13" />
+        <gifLib:GifImage Margin="218,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="30" Stretch="Fill" Width="30" Source="/WowItemMaker2;component/Resources/loading.gif" x:Name="IMG_loading" Visibility="Hidden" />
+        <Label Content="物品名称" Height="25" HorizontalAlignment="Right" Margin="0,54,176,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,55,50,0" Name="TB_ItemName" VerticalAlignment="Top" Width="120" KeyDown="TB_ItemName_KeyDown" />
+        <Button Name="btn_search" Height="23" Width="23" HorizontalAlignment="Right" Margin="0,55,28,0" VerticalAlignment="Top" Click="btn_search_Click" ToolTip="搜索">
+            <Image Source="/WowItemMaker2;component/Resources/toolbar_find.png" />
+        </Button>
+        <Button Name="btn_reset" Height="23" Width="23" HorizontalAlignment="Right" Margin="0,55,5,0" VerticalAlignment="Top" Click="btn_reset_Click" ToolTip="重置">
+            <Image Source="/WowItemMaker2;component/Resources/deleteIcon.png"/>
+        </Button>
+    </Grid>
+</Window>
