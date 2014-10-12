@@ -167,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\BackgroundDownloader.ICO" />
+    <Resource Include="changelog.txt" />
     <Content Include="conf\field.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
