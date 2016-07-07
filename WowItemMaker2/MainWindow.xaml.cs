@@ -32,6 +32,16 @@ namespace WowItemMaker2
             Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
             this.manager = new ItemManager();
             this.pager = new Pager();
+            //根据配置文件设置表格绑定字段名
+            this.dataGrid1.SelectedValuePath = Configuration.getIdFieldName();
+            DataGridTextColumn col_id = (DataGridTextColumn)this.dataGrid1.Columns[0];
+            Binding binding_id = new Binding();
+            binding_id.Path = new PropertyPath(Configuration.getIdFieldName());
+            col_id.Binding = binding_id;
+            DataGridTextColumn col_name = (DataGridTextColumn)this.dataGrid1.Columns[1];
+            Binding binding_name = new Binding();
+            binding_name.Path = new PropertyPath(Configuration.getNameFieldName());
+            col_name.Binding = binding_name;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

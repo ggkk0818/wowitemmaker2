@@ -66,6 +66,28 @@ namespace WowItemMaker2
             return res;
         }
 
+        public static string getNameFieldName()
+        {
+            string res = null;
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(filePath);
+                XmlNode node = doc.SelectSingleNode("/fields");
+                if (node != null && node.Attributes["name"] != null)
+                {
+                    res = node.Attributes["name"].Value;
+                }
+            }
+            catch (Exception e)
+            {
+                log.error("读取配置文件出错" + filePath);
+                log.error(e);
+            }
+            return res;
+        }
+
 
         public static ItemProperty[] getItemProperties()
         {
