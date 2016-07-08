@@ -88,6 +88,50 @@ namespace WowItemMaker2
             return res;
         }
 
+        public static string getClassFieldName()
+        {
+            string res = null;
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(filePath);
+                XmlNode node = doc.SelectSingleNode("/fields");
+                if (node != null && node.Attributes["class"] != null)
+                {
+                    res = node.Attributes["class"].Value;
+                }
+            }
+            catch (Exception e)
+            {
+                log.error("读取配置文件出错" + filePath);
+                log.error(e);
+            }
+            return res;
+        }
+
+        public static string getSubClassFieldName()
+        {
+            string res = null;
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(filePath);
+                XmlNode node = doc.SelectSingleNode("/fields");
+                if (node != null && node.Attributes["subclass"] != null)
+                {
+                    res = node.Attributes["subclass"].Value;
+                }
+            }
+            catch (Exception e)
+            {
+                log.error("读取配置文件出错" + filePath);
+                log.error(e);
+            }
+            return res;
+        }
+
 
         public static ItemProperty[] getItemProperties()
         {

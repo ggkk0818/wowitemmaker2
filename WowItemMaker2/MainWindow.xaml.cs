@@ -42,6 +42,14 @@ namespace WowItemMaker2
             Binding binding_name = new Binding();
             binding_name.Path = new PropertyPath(Configuration.getNameFieldName());
             col_name.Binding = binding_name;
+            DataGridTextColumn col_class = (DataGridTextColumn)this.dataGrid1.Columns[2];
+            Binding binding_class = new Binding();
+            binding_class.Path = new PropertyPath(Configuration.getClassFieldName());
+            col_class.Binding = binding_class;
+            DataGridTextColumn col_subclass = (DataGridTextColumn)this.dataGrid1.Columns[3];
+            Binding binding_subclass = new Binding();
+            binding_subclass.Path = new PropertyPath(Configuration.getSubClassFieldName());
+            col_subclass.Binding = binding_subclass;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

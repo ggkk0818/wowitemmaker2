@@ -263,12 +263,12 @@ namespace WowItemMaker2
                     break;
                 }
             }
-            if (data == null || pro == null || pro.Child == null || pro.Child.Trim().Length == 0)
+            if (data == null || pro == null || proChild == null || pro.Child == null || pro.Child.Trim().Length == 0)
                 return;
             foreach (UIElement element in this.mainGrid.Children)
             {
                 ComboBox cbChild = element as ComboBox;
-                if (cbChild != null && cbChild.Name.ToLower() == "cb_" + proChild.Name)
+                if (cbChild != null && cbChild.Name.ToLower() == "cb_" + proChild.Name.ToLower())
                 {
                     cbChild.ItemsSource = Configuration.getItemFieldData(pro.Child.ToLower(), data.Value, pro.Name);
                     cbChild.SelectedValue = proChild.Value;
