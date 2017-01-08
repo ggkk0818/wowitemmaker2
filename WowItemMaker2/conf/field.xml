@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<fields tablename="item_template" id="entry" name="name">
+<fields tablename="item_template" id="entry" name="name" class="class" subclass="subclass">
   <field name="entry" displayname="ID" regex="" data="" parent="" child="" type="" default="100000"></field>
   <field name="class" displayname="类型" regex="" data="" parent="" child="subclass" type="" default="0"></field>
   <field name="subclass" displayname="子类型" regex="" data="" parent="class" child="" type="" default="0"></field>
