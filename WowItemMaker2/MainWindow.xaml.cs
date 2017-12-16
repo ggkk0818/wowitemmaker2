@@ -24,6 +24,7 @@ namespace WowItemMaker2
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Logger log = new Logger(typeof(MainWindow));
         private ItemManager manager;
         private Pager pager;
         public MainWindow()
@@ -129,11 +130,13 @@ namespace WowItemMaker2
             {
                 Exception err = sender as Exception;
                 MessageBox.Show("发生错误。\r\n" + err.Message, this.Title, MessageBoxButton.OK, MessageBoxImage.Error);
+                log.error(err);
             }
             else if (sender.GetType().BaseType == typeof(DbException))
             {
                 Exception err = sender as Exception;
                 MessageBox.Show("数据库异常。\r\n" + err.Message, this.Title, MessageBoxButton.OK, MessageBoxImage.Error);
+                log.error(err);
             }
 
         }

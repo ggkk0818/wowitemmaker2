@@ -35,7 +35,7 @@ namespace WowItemMaker2
 
         public void info(object o)
         {
-            StringBuilder sb = new StringBuilder("DEBUG ");
+            StringBuilder sb = new StringBuilder("INFO ");
             DateTime now = DateTime.Now;
             sb.Append(now.ToString("yyyy-MM-dd HH:mm:ss.SSS "));
             if (this.type != null)
@@ -48,7 +48,7 @@ namespace WowItemMaker2
 
         public void error(object o)
         {
-            StringBuilder sb = new StringBuilder("DEBUG ");
+            StringBuilder sb = new StringBuilder("ERROR ");
             DateTime now = DateTime.Now;
             sb.Append(now.ToString("yyyy-MM-dd HH:mm:ss.SSS "));
             if (this.type != null)
