@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fields tablename="creature_template" id="entry" name="entry" class="npcflag" subclass="npcflag2">
+	<field name="entry" displayname="ID" regex="" data="" parent="" child="" type="" default="100000"></field>
+	<field name="npcflag" displayname="类型" regex="" data="" parent="" child="" type="" default="0"></field>
+	<field name="npcflag" displayname="子类型" regex="" data="" parent="" child="" type="" default="0"></field>
+	<field name="minlevel" displayname="最低等级" regex="" data="" parent="" child="" type="" default="0"></field>
+	<field name="maxlevel" displayname="最高等级" regex="" data="" parent="" child="" type="" default="0"></field>
+	<field name="ScaleLevelMin" displayname="动态最低等级" regex="" data="" parent="" child="" type="" default="0"></field>
+	<field name="ScaleLevelMax" displayname="动态最高等级" regex="" data="" parent="" child="" type="" default="0"></field>
+	<field name="exp" displayname="击杀经验" regex="" data="" parent="" child="" type="" default="0"></field>
+</fields>

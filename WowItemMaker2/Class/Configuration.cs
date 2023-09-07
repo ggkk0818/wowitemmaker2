@@ -11,9 +11,12 @@ namespace WowItemMaker2
     public static class Configuration
     {
         private static Logger log;
+        private static string configFileName;
+        private static XmlDocument configFileDoc;
         static Configuration()
         {
             log = new Logger(typeof(Configuration));
+            configFileName = "field.xml";
         }
 
         public static int getPageSize()
@@ -22,23 +25,35 @@ namespace WowItemMaker2
             return r;
         }
 
+        public static string getConfigFileName() { 
+            return configFileName;
+        }
+        /// <summary>
+        /// 设置配置文件名
+        /// </summary>
+        /// <param name="val">文件名</param>
+        public static void setConfigFileName(string val)
+        {
+            configFileName = val;
+            // 清除已缓存的配置文件内容
+            configFileDoc = null;
+        }
+
         public static string getItemTableName()
         {
             string res = null;
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(filePath);
+                XmlDocument doc = loadConfigFile();
                 XmlNode node = doc.SelectSingleNode("/fields");
                 if (node != null && node.Attributes["tablename"] != null)
                 {
                     res = node.Attributes["tablename"].Value;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                log.error("读取配置文件出错" + filePath);
+                log.error("读取配置文件出错");
                 log.error(e);
             }
             return res;
@@ -47,11 +62,9 @@ namespace WowItemMaker2
         public static string getIdFieldName()
         {
             string res = null;
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(filePath);
+                XmlDocument doc = loadConfigFile();
                 XmlNode node = doc.SelectSingleNode("/fields");
                 if (node != null && node.Attributes["id"] != null)
                 {
@@ -60,7 +73,7 @@ namespace WowItemMaker2
             }
             catch (Exception e)
             {
-                log.error("读取配置文件出错" + filePath);
+                log.error("读取配置文件出错");
                 log.error(e);
             }
             return res;
@@ -69,11 +82,9 @@ namespace WowItemMaker2
         public static string getNameFieldName()
         {
             string res = null;
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(filePath);
+                XmlDocument doc = loadConfigFile();
                 XmlNode node = doc.SelectSingleNode("/fields");
                 if (node != null && node.Attributes["name"] != null)
                 {
@@ -82,7 +93,7 @@ namespace WowItemMaker2
             }
             catch (Exception e)
             {
-                log.error("读取配置文件出错" + filePath);
+                log.error("读取配置文件出错");
                 log.error(e);
             }
             return res;
@@ -91,11 +102,9 @@ namespace WowItemMaker2
         public static string getClassFieldName()
         {
             string res = null;
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(filePath);
+                XmlDocument doc = loadConfigFile();
                 XmlNode node = doc.SelectSingleNode("/fields");
                 if (node != null && node.Attributes["class"] != null)
                 {
@@ -104,7 +113,7 @@ namespace WowItemMaker2
             }
             catch (Exception e)
             {
-                log.error("读取配置文件出错" + filePath);
+                log.error("读取配置文件出错");
                 log.error(e);
             }
             return res;
@@ -113,11 +122,9 @@ namespace WowItemMaker2
         public static string getSubClassFieldName()
         {
             string res = null;
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(filePath);
+                XmlDocument doc = loadConfigFile();
                 XmlNode node = doc.SelectSingleNode("/fields");
                 if (node != null && node.Attributes["subclass"] != null)
                 {
@@ -126,7 +133,7 @@ namespace WowItemMaker2
             }
             catch (Exception e)
             {
-                log.error("读取配置文件出错" + filePath);
+                log.error("读取配置文件出错");
                 log.error(e);
             }
             return res;
@@ -136,11 +143,9 @@ namespace WowItemMaker2
         public static ItemProperty[] getItemProperties()
         {
             ArrayList list = new ArrayList();
-            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\field.xml";
             try
             {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(filePath);
+                XmlDocument doc = loadConfigFile();
                 XmlNodeList nodes = doc.SelectNodes("/fields/field");
                 foreach (XmlNode node in nodes)
                 {
@@ -162,7 +167,7 @@ namespace WowItemMaker2
             }
             catch (Exception e)
             {
-                log.error("读取配置文件出错" + filePath);
+                log.error("读取配置文件出错");
                 log.error(e);
             }
             return (ItemProperty[])list.ToArray(typeof(ItemProperty));
@@ -205,6 +210,48 @@ namespace WowItemMaker2
                 }
             }
             return (ItemFieldData[])list.ToArray(typeof(ItemFieldData));
+        }
+        /// <summary>
+        /// 获取配置文件名数组
+        /// </summary>
+        /// <returns>文件名数组</returns>
+        public static string[] getConfigFileList() {
+            try
+            {
+                string dirPath = AppDomain.CurrentDomain.BaseDirectory + "\\conf";
+                string[] pathArr = Directory.GetFiles(dirPath);
+                return pathArr.Select(path => path.Substring(path.LastIndexOf("\\") + 1)).ToArray();
+            }
+            catch (Exception e)
+            {
+                log.error("读取配置文件列表出错");
+                log.error(e);
+                return null;
+            }
+        }
+        /// <summary>
+        /// 加载配置文件内容
+        /// </summary>
+        /// <returns>XML文档实例</returns>
+        private static XmlDocument loadConfigFile()
+        {
+            if (configFileDoc == null)
+            {
+                try
+                {
+                    string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\conf\\" + configFileName;
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load(filePath);
+                    // 缓存到静态变量
+                    configFileDoc = doc;
+                }
+                catch (Exception e)
+                {
+                    log.error("读取配置文件出错");
+                    log.error(e);
+                }
+            }
+            return configFileDoc;
         }
     }
 }

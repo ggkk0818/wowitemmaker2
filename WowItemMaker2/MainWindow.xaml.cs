@@ -33,6 +33,17 @@ namespace WowItemMaker2
             Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
             this.manager = new ItemManager();
             this.pager = new Pager();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Window_Conn win_conn = new Window_Conn();
+            win_conn.OnServerConnected += new EventHandler(win_conn_OnServerConnected);
+            win_conn.ShowDialog();
+        }
+
+        void win_conn_OnServerConnected(object sender, EventArgs e)
+        {
             //根据配置文件设置表格绑定字段名
             this.dataGrid1.SelectedValuePath = Configuration.getIdFieldName();
             DataGridTextColumn col_id = (DataGridTextColumn)this.dataGrid1.Columns[0];
@@ -51,19 +62,9 @@ namespace WowItemMaker2
             Binding binding_subclass = new Binding();
             binding_subclass.Path = new PropertyPath(Configuration.getSubClassFieldName());
             col_subclass.Binding = binding_subclass;
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            Window_Conn win_conn = new Window_Conn();
-            win_conn.OnServerConnected += new EventHandler(win_conn_OnServerConnected);
-            win_conn.ShowDialog();
-        }
-
-        void win_conn_OnServerConnected(object sender, EventArgs e)
-        {
+            // 查询数据表
             DBAccess db = (DBAccess)sender;
-            this.manager.Db = db;
+            this.manager = new ItemManager(db);
             showItems(1);
         }
 

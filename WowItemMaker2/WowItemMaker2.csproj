@@ -170,9 +170,11 @@
   <ItemGroup>
     <Resource Include="Resources\BackgroundDownloader.ICO" />
     <Resource Include="changelog.txt" />
+    <Content Include="conf\NPC表.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="conf\field624.xml">
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="conf\field.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -67,7 +67,7 @@
         <TextBox Name="TB_page" Height="23" Width="50" HorizontalAlignment="Left" Margin="117,0,0,4" VerticalAlignment="Bottom" FontSize="13" Text="0" HorizontalContentAlignment="Center" KeyDown="TB_page_KeyDown" />
         <Label Name="LB_page" Height="25" Width="50" HorizontalAlignment="Left" Margin="167,0,0,4" VerticalAlignment="Bottom" Content="/0" VerticalContentAlignment="Center"  FontSize="13" />
         <gifLib:GifImage Margin="218,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="30" Stretch="Fill" Width="30" Source="/WowItemMaker2;component/Resources/loading.gif" x:Name="IMG_loading" Visibility="Hidden" />
-        <Label Content="物品名称" Height="25" HorizontalAlignment="Right" Margin="0,54,176,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="名称" Height="25" HorizontalAlignment="Right" Margin="0,54,176,0" Name="label1" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Right" Margin="0,55,50,0" Name="TB_ItemName" VerticalAlignment="Top" Width="120" KeyDown="TB_ItemName_KeyDown" />
         <Button Name="btn_search" Height="23" Width="23" HorizontalAlignment="Right" Margin="0,55,28,0" VerticalAlignment="Top" Click="btn_search_Click" ToolTip="搜索">
             <Image Source="/WowItemMaker2;component/Resources/toolbar_find.png" />

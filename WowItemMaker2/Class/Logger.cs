@@ -46,6 +46,19 @@ namespace WowItemMaker2
             sw.Flush();
         }
 
+        public void warn(object o)
+        {
+            StringBuilder sb = new StringBuilder("WARN ");
+            DateTime now = DateTime.Now;
+            sb.Append(now.ToString("yyyy-MM-dd HH:mm:ss.SSS "));
+            if (this.type != null)
+                sb.Append(this.type.FullName + " ");
+            if (o != null)
+                sb.Append(o);
+            sw.WriteLine(sb.ToString());
+            sw.Flush();
+        }
+
         public void error(object o)
         {
             StringBuilder sb = new StringBuilder("ERROR ");
