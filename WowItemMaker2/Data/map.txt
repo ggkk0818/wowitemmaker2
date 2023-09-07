@@ -1,8 +1,7 @@
-﻿0,任何
+0,东部王国
 1,卡利姆多
-13,Testing
+13,占位符
 25,Scott Test
-29,CashTest
 30,奥特兰克山谷
 33,影牙城堡
 34,暴风城监狱
@@ -19,14 +18,14 @@
 109,沉没的神庙
 129,剃刀高地
 169,翡翠梦境
-189,血色修道院
+189,旧血色修道院
 209,祖尔法拉克
-229,黑石塔
+229,黑石塔下层
 230,黑石深渊
 249,奥妮克希亚的巢穴
 269,开启黑暗之门
-289,通灵学院
-309,祖尔格拉布
+289,旧通灵学院
+309,古城祖尔格拉布
 329,斯坦索姆
 349,玛拉顿
 369,矿道地铁
@@ -61,7 +60,7 @@
 556,奥金顿：塞泰克大厅
 557,奥金顿：法力墓穴
 558,奥金顿：奥金尼地穴
-559,纳格兰竞技场"
+559,纳格兰竞技场（旧）
 560,逃离敦霍尔德
 562,刀锋山竞技场
 564,黑暗神殿
@@ -71,7 +70,7 @@
 571,诺森德
 572,洛丹伦废墟
 573,ExteriorTest
-574,乌特加德要塞
+574,乌特加德城堡
 575,乌特加德之巅
 576,魔枢
 578,魔环
@@ -103,23 +102,667 @@
 607,远古海滩
 608,紫罗兰监狱
 609,黑锋要塞
-610,传送:提瑞斯法到复仇台地
-612,传送:米奈希尔到瓦尔加德
-613,传送:奥格瑞玛到战歌堡
-614,传送:暴风城到骁勇要塞
+610,Transport: Tirisfal to Vengeance Landing
+612,Transport: Menethil to Valgarde
+613,Transport: Orgrimmar to Warsong Hold
+614,Transport: Stormwind to Valiance Keep
 615,黑曜石圣殿
 616,永恒之眼
 617,达拉然下水道
 618,勇气竞技场
 619,安卡赫特：古代王国
-620,传送:默亚基到昂纽沛
-621,传送:默亚基到卡玛廓
-622,传送:奥格林之锤
-623,传送:破天者号
-624,冬拥湖团队战
+620,Transport: Moa'ki to Unu'pe
+621,Transport: Moa'ki to Kamagua
+622,Transport: Orgrim's Hammer
+623,Transport: The Skybreaker
+624,阿尔卡冯的宝库
+627,Unused (DELETE ME)
 628,征服之岛
-641,传送:联盟飞船BG
-642,传送:部落飞船BG
-647,传送:奥格玛到雷霆崖
-649,十字军试炼
-650,勇士试炼
+631,冰冠堡垒
+632,灵魂洪炉
+637,深渊之喉外部
+638,吉尔尼斯
+641,Transport: Alliance Airship BG
+642,Transport: HordeAirshipBG
+643,潮汐王座
+644,起源大厅
+645,黑石岩窟
+646,深岩之洲
+647,运输 - 奥格瑞玛到雷霆崖
+648,失落群岛
+649,十字军的试炼
+650,冠军的试炼
+651,ElevatorSpawnTest
+654,吉尔尼斯2
+655,吉尔尼斯位面1
+656,吉尔尼斯位面2
+657,旋云之巅
+658,萨隆矿坑
+659,失落群岛火山爆发
+660,深岩之洲天顶
+661,失落群岛胶囊镇
+662,运输工具：联盟瓦丝琪尔船只
+668,映像大厅
+669,黑翼血环
+670,格瑞姆巴托
+671,暮光堡垒
+672,Transport: The Skybreaker (Icecrown Citadel Raid)
+673,Transport: Orgrim's Hammer (Icecrown Citadel Raid)
+674,运输工具：开往瓦丝琪尔的船只
+712,Transport: The Skybreaker (IC Dungeon)
+713,Transport: Orgrim's Hammer (IC Dungeon)
+718,Trasnport: The Mighty Wind (Icecrown Citadel Raid)
+719,海加尔山位面1
+720,火焰之地
+721,火焰之地，地形2
+723,暴风城
+724,红玉圣殿
+725,巨石之核
+726,双子峰
+727,碎银矿脉
+728,吉尔尼斯之战（旧城市地图）
+730,大漩涡区域
+731,石爪山脉炸弹
+732,托尔巴拉德
+734,安其拉平台
+736,暮光高地龙喉位面
+738,前往瓦丝琪尔的船只（奥格瑞玛->瓦丝琪尔）
+739,瓦丝琪尔水下——部落
+740,瓦丝琪尔水下——联盟
+741,暮光高地部落运输工具
+742,瓦丝琪尔水下——部落深渊之喉外环
+743,瓦丝琪尔水下——联盟深渊之喉外环
+746,奥丹姆绿洲位面
+747,运输工具：深岩之洲炮舰
+748,运输工具：奥尼克西亚/奈法利安电梯
+749,运输工具：吉尔尼斯行进炮舰
+750,运输工具：吉尔尼斯静止炮舰
+751,赤脊山——兽人炸弹
+752,赤脊山——桥上位面一
+753,赤脊山——桥上位面二
+754,风神王座
+755,托维尔失落之城
+757,巴拉丁监狱
+759,奥丹姆入口位面
+760,暮光高地位面入口
+761,吉尔尼斯之战
+762,暮光高地飞艇1
+763,暮光高地飞艇2
+764,奥丹姆——失事营地位面
+765,卡拉兹工坊攻击艇
+766,运输工具：吉尔尼斯行进炮舰02
+767,运输工具：吉尔尼斯行进炮舰03
+859,祖尔格拉布
+860,迷踪岛
+861,熔火前线
+870,潘达利亚
+930,阴暗之地
+938,时光之末
+939,永恒之井
+940,暮光审判
+951,传奇武器任务：魔枢
+959,影踪禅院
+960,青龙寺
+961,风暴烈酒酿造厂
+962,残阳关
+967,巨龙之魂
+968,评级风暴之眼
+971,Jade Forest Alliance Hub Phase
+972,Jade Forest Battlefield Phase
+974,暗月马戏团
+975,Turtle Ship Phase 01
+976,Turtle Ship Phase 02
+977,大漩涡死亡之翼战斗
+980,托维尔隆竞技场
+994,魔古山宫殿
+995,The Depths [UNUSED]
+996,永春台
+998,寇魔古寺
+999,塞拉摩的沦陷
+1000,塞拉摩的沦陷
+1001,血色大厅
+1004,血色修道院
+1005,酝酿风暴
+1007,通灵学院
+1008,魔古山宝库
+1009,恐惧之心
+1010,CTF3
+1011,围攻砮皂寺
+1014,晴日峰
+1019,塞拉摩废墟
+1024,绿石村
+1028,(UNUSED) Scenario: Mogu Ruins
+1029,(UNUSED) Scenario: Mogu Crypt
+1030,遗忘之王古墓
+1031,破军比武场
+1032,Pet Battle - Jade Forest
+1035,寇魔古寺
+1043,搏击竞技场
+1048,盎迦猴岛
+1049,(UNUSED) Scenario: Black Ox Temple
+1050,突袭扎尼维斯
+1051,酿月祭
+1060,Level Design Land - Dev Only
+1061,部落海滩日常区域
+1062,联盟海滩日常区域
+1064,魔古岛日常区域
+1066,Stormwind Gunship Pandaria Start Area
+1074,Orgrimmar Gunship Pandaria Start
+1075,Theramore's Fall Phase
+1076,Jade Forest Horde Starting Area
+1095,黑暗中的匕首
+1098,雷电王座
+1099,海战场景
+1101,保卫酒坊战场
+1102,统御岗哨
+1103,雄狮港
+1104,王者的耐心
+1105,深风峡谷
+1106,吉安娜达拉然场景
+1107,恐痕裂隙
+1112,追踪黑暗收割议会
+1113,传送：暗月马戏团旋转木马
+1116,德拉诺
+1120,寻晨者海角
+1121,紫罗兰高地
+1122,City Siege - Mogu Island Progression Scenario
+1123,Lightning Forge - Mogu Island Progression Scenario
+1124,Shipyard - Mogu Island Progression Scenario
+1125,Alliance Hub - Mogu Island Progression Scenario
+1126,魔古岛进度事件
+1127,Final Gate - Mogu Island Progression Scenario
+1128,魔古岛事件——部落营地
+1129,魔古岛事件——联盟营地
+1130,雪山血战
+1131,怒焰之谜
+1132,传送：猎天号（搏击竞技场）
+1133,传送：赞达拉舰船（魔古岛）
+1134,虎踞峰
+1135,魔古岛藏宝室
+1136,决战奥格瑞玛
+1144,古神之心场景战役
+1148,试炼场
+1152,FW Horde Garrison Level 1
+1153,FW Horde Garrison Level 3
+1154,FW Horde Garrison Level 4
+1155,激流堡
+1157,半山场景战役
+1158,SMV Alliance Garrison Level 1
+1159,SMV Alliance Garrison Level 3
+1160,SMV Alliance Garrison Level 4
+1161,天神比武大会
+1166,Small Battleground A
+1168,The Purge Of Grommar - Scenario
+1169,Small Battleground B
+1170,决战影踪派
+1171,Small Battleground D
+1172,传送：决战奥格瑞玛（联盟）
+1173,传送：决战奥格瑞玛（部落）
+1175,血槌炉渣矿井
+1176,影月墓地
+1179,魔兽争霸群雄
+1181,PattyMack Test Garrison Bldg Map
+1182,奥金顿
+1187,GOR Alliance Garrison Level 1
+1188,GOR Alliance Garrison Level 2
+1189,GOR Alliance Garrison Level 3
+1190,诅咒之地相位
+1191,Ashran - World PvP
+1192,交通工具：戈尔隆德火车
+1195,钢铁码头
+1200,白骨镇场景战役
+1203,霜火岭终极场景战役
+1205,黑石铸造厂
+1207,沙塔斯之战
+1208,恐轨车站
+1209,通天峰
+1212,Garrison - Alliance - Blacksmith 3
+1213,Garrison - Alliance - Alchemy 1
+1214,Garrison - Alliance - Enchanting 3
+1215,Garrison - Alliance - Engineering 3
+1216,Garrison - Alliance - Farm1
+1217,Garrison - Alliance - Inscription 1
+1218,Garrison - Alliance - Jewelcrafting 1
+1219,Garrison - Alliance - Leatherworking 1
+1220,破碎群岛
+1221,Garrison - Alliance Mine 1
+1222,Garrison - Alliance Mine 2
+1223,Garrison - Alliance Mine 3
+1224,Garrison - Alliance Stable 1
+1225,Garrison - Alliance Stable 2
+1226,Garrison - Alliance Stable 3
+1227,Garrison - Alliance - Tailoring 3
+1228,悬槌堡
+1229,Garrison - Alliance - Inn 1
+1230,Garrison - Alliance - Barn 1
+1231,交通工具：镇潮者号舰艇
+1232,GOR Horde Garrison Level 0
+1233,GOR Horde Garrison Level 3
+1234,TAL Alliance Garrison Level 0
+1235,TAL Alliance Garrison Level 3
+1236,TAL Horde Garrison Level 0
+1237,TAL Horde Garrison Level 3
+1238,SOA Alliance Garrison Level 0
+1239,SOA Alliance Garrison Level 3
+1240,SOA Horde Garrison Level 0
+1241,SOA Horde Garrison Level 3
+1242,NAG Alliance Garrison Level 0
+1243,NAG Alliance Garrison Level 3
+1244,NAG Horde Garrison Level 0
+1245,NAG Horde Garrison Level 3
+1247,Garrison - Alliance - Armory 1
+1248,Garrison - Alliance - Barracks 1
+1249,Garrison - Alliance - Engineering 1
+1250,Alliance - Garrison - Herb Garden 1 (UNUSED)
+1251,Alliance - Garrison - Inn 1 DONT USE
+1252,Garrison - Alliance - Lumbermill 1
+1253,Garrison - Alliance - Mage Tower 1
+1254,Garrison - Alliance - Sparring Arena 1
+1255,Garrison - Alliance - Salvage Yard 1
+1256,Garrison - Alliance - StoreHouse 1
+1257,Garrison - Alliance - Trading Post 1
+1258,Garrison - Alliance - Tailoring 1
+1259,Garrison - Alliance - Enchanting 1
+1260,Garrison - Alliance - Blacksmith 1
+1261,Garrison - Alliance - Plot Small
+1262,Garrison - Allilance - Plot Medium
+1263,Garrison - Alliance - Plot Large
+1264,Propland - Dev Only
+1265,塔纳安丛林新手区
+1266,鲜血之环场景战役
+1268,塔隆戈尔的决战
+1270,Development Land 3
+1273,Nagrand - Garrison Camp - Stable2
+1277,卡拉波防线
+1278,Garrison - Horde - Barracks 1
+1279,永茂林地
+1280,南海镇VS塔伦米尔
+1281,Garrison - Horde - Alchemy 1
+1282,Garrison - Horde - Armory 1
+1283,Garrison - Horde - Barn 1
+1284,Garrison - Horde - Blacksmith 1
+1285,Garrison - Horde - Enchanting 1
+1286,Garrison - Horde - Engineering 1
+1287,Garrison - Horde - Inn 1
+1288,Garrison - Horde - Inscription 1
+1289,Garrison - Horde - Jewelcrafting 1
+1290,Garrison - Horde - Leatherworking 1
+1291,Garrison - Horde - Lumbermill 1
+1292,Garrison - Horde - Mage Tower 1
+1293,Garrison - Horde - Mine 1
+1294,Garrison - Horde - Pet Stable 1
+1295,Garrison - Horde - Salvage Yard 1
+1296,Garrison - Horde - Sparring Arena 1
+1297,Garrison - Horde - Stable 1
+1298,Garrison - Horde Storehouse 1
+1299,Garrison - Horde - Tailoring 1
+1300,Garrison - Horde - Trading Post 1
+1301,Garrison - Horde - Workshop 1
+1302,Garrison - Alliance - Workshop 1
+1303,Garrison - Horde - Farm1
+1304,Garrison - Horde - Plot Large
+1305,Garrison - Horde - Plot Medium
+1306,Garrison - Horde - Plot Small
+1307,Tanaan Jungle Intro - Forge Phase
+1308,Garrison - Horde - Fishing 1
+1309,Garrison - Alliance - Fishing 1
+1310,Expansion 5 QA Model Map
+1311,Outdoor Garrison - Arena - Horde (NEEDS WMO)
+1312,Outdoor Garrison - Arena - Alliance (NEEDS WMO)
+1313,Outdoor Garrison - Lumber Mill - Alliance
+1314,Outdoor Garrison - Lumber Mill - Horde
+1315,Outdoor Garrison - Armory - Horde
+1316,Outdoor Garrison - Armory - Alliance
+1317,Outdoor Garrison - Mage Tower - Horde
+1318,Outdoor Garrison - Mage Tower - Alliance
+1319,Outdoor Garrison - Stables - Horde
+1320,Outdoor Garrison - Stables - Alliance
+1321,Outdoor Garrison - Workshop - Horde
+1322,Outdoor Garrison - Workshop - Alliance
+1323,Outdoor Garrison - Inn - Horde
+1324,Outdoor Garrison - Inn - Alliance
+1325,Outdoor Garrison - Tradiing Post 1 - Horde
+1326,Outdoor Garrison - Tradiing Post - Alliance
+1327,"Outdoor Garrison - Construction Plot, Medium - Horde"
+1328,"Outdoor Garrison - Construction Plot, Medium - Alliance"
+1329,Grommashar Scenario
+1330,FW Horde Garrison Level 2
+1331,SMV Alliance Garrison Level 2
+1332,Garrison - Horde - Barracks 2
+1333,Garrison - Horde - Armory 2
+1334,Garrison - Horde - Barn 2
+1335,Garrison - Horde - Inn 2
+1336,Garrison - Horde - Lumbermill 2
+1337,Garrison - Horde - Mage Tower 2
+1338,Garrison - Horde - Pet Stable 2
+1339,Garrison - Horde - Stable 2
+1340,Garrison - Horde - Trading Post 2
+1341,Garrison - Horde - Workshop 2
+1342,Garrison - Horde - Barracks 3
+1343,Garrison - Horde - Armory 3
+1344,Garrison - Horde - Barn 3
+1345,Garrison - Horde - Inn 3
+1346,Garrison - Horde - Mage Tower 3
+1347,Garrison - Horde - Pet Stable 3
+1348,Garrison - Horde - Stable 3
+1349,Garrison - Horde - Trading Post 3
+1350,Garrison - Horde - Workshop 3
+1351,Garrison - Alliance - Large - Construction
+1352,Garrison - Alliance - Medium - Construction
+1353,Garrison - Horde - Large - Construction
+1354,Garrison - Horde - Medium - Construction
+1358,黑石塔上层
+1361,Garrison - Alliance - Mage Tower 2
+1362,Garrison - Alliance - Mage Tower 3
+1363,Garrison - Horde - Mine 2
+1364,Garrison - Horde - Mine 3
+1367,Garrison - Alliance - Workshop 2
+1368,Garrison - Alliance - Workshop 3
+1369,Garrison - Alliance - Lumbermill 2
+1370,Garrison - Alliance - Lumbermill 3
+1371,Garrison - Horde - Small - Construction
+1372,Garrison - Alliance - Small - Construction
+1374,奥金顿任务
+1375,Garrison - Alliance - Alchemy 2
+1376,Garrison - Alliance - Alchemy 3
+1377,Garrison - Alliance - Blacksmith 2
+1378,Garrison - Alliance - Enchanting 2
+1379,Garrison - Alliance - Engineering 2
+1380,Garrison - Alliance - Inscription 2
+1381,Garrison - Alliance - Inscription 3
+1382,Garrison - Alliance - Jewelcrafting 2
+1383,Garrison - Alliance - Jewelcrafting 3
+1384,Garrison - Alliance - Leatherworking 2
+1385,Garrison - Alliance - Leatherworking 3
+1386,Garrison - Alliance - Tailoring 2
+1387,Garrison - Alliance - StoreHouse 2
+1388,Garrison - Alliance - StoreHouse 3
+1389,Garrison - Horde Storehouse 2
+1390,Garrison - Horde Storehouse 3
+1391,Garrison - Alliance - Salvage Yard 2
+1392,Garrison - Alliance - Salvage Yard 3
+1393,Garrison - Horde - Lumbermill 3
+1394,Garrison - Alliance - Sparring Arena 2
+1395,Garrison - Alliance - Sparring Arena 3
+1396,Garrison - Alliance - Trading Post 2
+1397,Garrison - Alliance - Trading Post 3
+1398,Garrison - Alliance - Barn 2
+1399,Garrison - Alliance - Barn 3
+1400,Garrison - Alliance - Inn 2
+1401,Garrison - Alliance - Inn 3
+1402,戈尔隆德大决战
+1403,Garrison - Alliance - Barracks 2
+1404,Garrison - Alliance - Barracks 3
+1405,Garrison - Alliance - Armory 2
+1406,Garrison - Alliance - Armory 3
+1407,zzzOld
+1409,Garrison - Horde - Sparring Arena 2
+1410,Garrison - Horde - Sparring Arena 3
+1411,Garrison - Horde - Alchemy 2
+1412,Garrison - Horde - Alchemy 3
+1413,Garrison - Horde - Blacksmith 2
+1414,Garrison - Horde - Blacksmith 3
+1415,Garrison - Horde - Enchanting 2
+1416,Garrison - Horde - Enchanting 3
+1417,Garrison - Horde - Inscription 2
+1418,Garrison - Horde - Inscription 3
+1419,Garrison - Horde - Leatherworking 2
+1420,Garrison - Horde - Leatherworking 3
+1421,Garrison - Horde - Jewelcrafting 2
+1422,Garrison - Horde - Jewelcrafting 3
+1423,Garrison - Horde - Tailoring 2
+1424,Garrison - Horde - Tailoring 3
+1425,Garrison - Horde - Salvage Yard 2
+1426,Garrison - Horde - Salvage Yard 3
+1427,PattyMack Test Garrison Bld Map2
+1429,Garrison - Horde - Engineering 2
+1430,Garrison - Horde - Engineering 3
+1431,角斗场
+1432,Garrison - Horde - Fishing 2
+1433,Garrison - Horde - Fishing 3
+1434,Garrison - Alliance - Fishing 2
+1435,Garrison - Alliance - Fishing 3
+1437,Garrison - Alliance - Pet Stable 1
+1438,Garrison - Alliance - Pet Stable 2
+1439,Garrison - Alliance - Pet Stable 3
+1440,Garrison - Alliance - Infirmary 1
+1441,Garrison - Alliance - Infirmary 2
+1442,Garrison - Alliance - Infirmary 3
+1446,"Outdoor Garrison - Construction Plot, Large - Alliance"
+1447,"Outdoor Garrison - Construction Plot, Large - Horde"
+1448,地狱火堡垒
+1451,Tanaan Legion Test
+1453,北郡之灾
+1454,破碎海滩
+1455,现世边界
+1456,艾萨拉之眼
+1457,测试地下城
+1458,奈萨里奥的巢穴
+1459,交通工具：铁山号
+1460,破碎海滩场景战役
+1461,阿苏纳场景战役
+1462,伊利丹之岩
+1463,冥狱深渊外围
+1464,塔纳安丛林
+1465,Tanaan Jungle - No Hubs Phase
+1466,黑心林地
+1468,占位符
+1469,艾泽拉斯之心
+1470,军团地下城
+1471,测试地下城
+1473,Garrison - Alliance - Shipyard
+1474,Garrison - Horde - Shipyard
+1475,纳沙尔之喉
+1476,传送：纳沙尔之喉
+1477,英灵殿
+1478,月神殿
+1479,苍穹要塞
+1480,冰冠堡垒
+1481,马顿
+1482,Garrison Shipyard - Submarine - Alliance
+1483,Garrison Shipyard - Destroyer - Alliance
+1484,Garrison Shipyard - Transport
+1485,Garrison Shipyard - Battleship - Alliance
+1486,Garrison Shipyard - Carrier - Horde
+1487,Garrison Shipyard - Submarine - Horde
+1488,Garrison Shipyard - Destroyer - Horde
+1489,尼斯卡拉
+1492,噬魂之喉
+1493,守望者地窟
+1494,紫罗兰监狱
+1495,盾憩岛
+1496,Garrison Shipyard - Carrier - Alliance
+1497,Garrison Shipyard - Battleship - Horde
+1498,邪魂堡垒
+1499,占位符
+1500,破碎海滩
+1501,黑鸦堡垒
+1502,达拉然下水道
+1503,深岩之洲
+1504,黑鸦堡垒竞技场
+1505,纳格兰竞技场
+1509,占位符
+1510,占位符
+1511,蔑潮港
+1512,虚空之光神殿
+1513,守护者圣殿
+1514,迷踪岛
+1515,胡恩之战
+1516,魔法回廊
+1517,占位符
+1518,占位符
+1519,邪能之槌号
+1520,翡翠梦魇
+1522,恐痕裂隙
+1523,邪能之槌号防御战场景战役
+1526,白虎寺
+1527,至高岭场景战役
+1528,天空之墙
+1529,卡拉赞
+1530,暗夜要塞
+1532,至高岭台地场景战役
+1533,卡拉赞墓穴
+1534,月光林地
+1535,月光林地
+1536,乌索克的巢穴
+1537,占位符
+1538,占位符
+1539,提瑞斯法林地
+1540,翡翠梦境之路
+1541,永春台
+1544,突袭紫罗兰监狱
+1545,阿苏纳
+1547,占位符
+1549,占位符
+1550,占位符
+1552,阿莎曼之墓
+1553,薄暮岛礁
+1554,占位符
+1555,占位符
+1556,占位符
+1557,占位符
+1559,占位符
+1560,占位符
+1561,占位符
+1571,群星庭院
+1572,大漩涡
+1579,奥杜尔
+1580,大漩涡
+1582,占位符
+1583,魔枢宝库
+1584,占位符
+1586,突袭暴风城
+1588,占位符
+1589,占位符
+1590,占位符
+1591,占位符
+1592,占位符
+1593,占位符
+1594,占位符
+1599,诺达希尔
+1600,潮汐王座
+1602,占位符
+1603,潮汐王座场景战役
+1604,占位符
+1605,占位符
+1607,占位符
+1608,海加尔 - 上古之战
+1609,风暴神殿
+1610,占位符
+1611,占位符
+1612,法兰纳尔废墟
+1616,法罗纳尔
+1617,死亡骑士战役 - 幽暗城
+1618,死亡骑士战役 - 血色修道院
+1620,神器 - 暴风城
+1621,黑暗神殿 - 军团
+1622,泰洛古斯裂隙场景战役
+1623,法师战役 - 魔环
+1624,埃索达之战
+1625,青龙的试炼
+1626,崩塌 - 苏拉玛场景战役
+1627,邪能之槌号恶魔猎手场景战役
+1628,传送：联盟战舰
+1629,虚空之光神殿
+1630,托尔巴拉德
+1632,魔法回廊 - 苏拉玛场景战役
+1637,Transport: Alliance Ship PhaseableMO
+1638,Transport: Horde Ship PhaseableMO
+1639,Transport: Kvaldir Ship PhaseableMO
+1646,黑鸦堡垒
+1647,沃金的火葬柴堆
+1648,勇气试炼
+1649,传送：部落战舰
+1650,军团指挥舰传送
+1651,重返卡拉赞
+1653,黑暗虚空
+1657,刀锋山竞技场
+1658,Environment Art Land - Dev Only
+1662,苏拉玛
+1663,地下城封锁线
+1666,突袭破碎海滩
+1667,Legion Ship - Vertical
+1668,Legion Ship - Horizontal
+1669,阿古斯
+1670,破碎海滩
+1671,Broken Shore - Prepatch 7.2 (Backup)
+1672,刀锋山竞技场
+1673,The Eye of Eternity - Scenario
+1676,萨格拉斯之墓
+1677,永夜大教堂
+1681,阿拉希盆地之冬
+1682,The Fel Hammer Terrain Phase
+1683,Artifact - Gnomeregan
+1684,Dread Scar Rift - Warlock Scenario Platform
+1687,哀嚎洞穴
+1688,死亡矿井
+1689,The Eye of Eternity - Mage Class Mount
+1691,烹饪：不可能的任务
+1692,Pit of Saron - Death Knight Campaign
+1693,Stormstout Brewery - Monk Scenario
+1694,诺莫瑞根
+1695,战舰：毁灭号
+1696,Legion - Command Center
+1697,Legion - Legion Spider Cave
+1698,Artifact - Acquisition - Tank
+1699,Legion - Legion Fel Cave
+1700,Legion - Legion Fel Firenova Area
+1701,Legion - Legion Barracks
+1702,Artifact - Highmountain - Dual Boss
+1703,Halls of Valor - Scenario
+1704,Legion Ship - Horizontal - Valsharah
+1705,Legion Ship - Horizontal - Azsuna
+1706,Legion Ship - Vertical - HighMountain
+1707,Legion Ship - Vertical - Stormheim
+1708,Stratholme - Paladin Class Mount
+1710,Black Rook Hold - Artifact Challenge
+1711,联盟潜水艇
+1712,安托鲁斯，燃烧王座
+1714,Halls Of Valor - Warrior Class Mount
+1715,黑石山之战
+1716,破碎海滩法师塔
+1719,Dread Scar Rift - Warlock Mount Scenario
+1723,寒脊山谷
+1728,英灵殿
+1729,The Eye of Eternity - Mage Class Mount (Shorter Version)
+1730,Shrine of Aviana Defense - Scenario
+1731,Druid Mount Finale - Scenario
+1732,Felwing Ledge - Demon Hunter Class Mount
+1733,艾泽拉斯的警示场景战役
+1734,风神王座 - 萨满祭司职业坐骑
+1735,冰冻废土
+1736,红玉圣殿
+1737,Pocket Dimension Akazamzaraks Hat Scenario
+1738,失落冰川
+1741,埃索达
+1744,时尚试炼
+1746,风暴要塞：禁魔监狱
+1747,模拟训练场
+1750,秘蓝岛
+1751,占位符
+1752,占位符
+1753,执政团之座
+1756,克罗米之死
+1764,无尽大殿
+1773,艾泽拉斯之影
+1774,万世熔炉
+1775,恩佐斯之喉
+1776,奥格瑞玛大使馆
+1779,侵入点
+1782,涌泉海滨
+1795,施瓦德之家
+1803,涌泉海滩
+1806,暴风城大使馆
+1812,苏拉玛
+1815,希利苏斯
+1817,希利苏斯：创伤之痕
+1818,银月城
+1840,太阳之井
+1855,维迪卡尔
+1856,Transport: Azerite BG - Alliance Airship
+1857,Transport: Azerite BG - Horde Gunship
+1860,维迪卡尔
+1863,BL - Test Map
+1865,泰洛古斯裂隙
+1902,希利苏斯联盟炮艇
+1903,希利苏斯部落炮艇

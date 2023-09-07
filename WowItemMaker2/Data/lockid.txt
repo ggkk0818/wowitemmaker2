@@ -1,0 +1,28 @@
+0,无
+1,开锁
+2,草药学
+3,采矿
+4,解除陷阱
+5,打开
+6,Treasure (DND)
+7,Calcified Elven Gems (DND)
+8,关闭
+9,设置陷阱
+10,快速打开
+11,快速关闭
+12,Open Tinkering
+13,Open Kneeling
+14,Open Attacking
+15,Gahz'ridian (DND)
+16,Blasting
+17,PvP开启
+18,PvP关闭
+19,钓鱼
+20,铭文
+21,从载具上打开
+22,考古学
+23,PvP快速开启
+28,伐木场
+29,剥皮
+30,远古魔力
+31,战况板
