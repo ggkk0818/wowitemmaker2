@@ -160,7 +160,11 @@ namespace WowItemMaker2
                 if (p.Data != null && p.Data.Trim().Length > 0)
                     fieldName = p.Data;
                 if (p.Parent != null && p.Parent.Trim().Length > 0)
-                    items = Configuration.getItemFieldData(fieldName.ToLower() + p.Value);
+                {
+                    // 读取父属性值对应数据文件
+                    ItemProperty parent = this.properties.Where(parentProp => parentProp.Name.ToUpper() == p.Parent.Trim().ToUpper()).FirstOrDefault();
+                    items = Configuration.getItemFieldData(fieldName.ToLower() + (parent != null ? parent.Value : string.Empty));
+                }
                 else
                     items = Configuration.getItemFieldData(fieldName.ToLower());
                 if (items.Length > 0)

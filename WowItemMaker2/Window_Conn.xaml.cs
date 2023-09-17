@@ -15,6 +15,8 @@ using MySql.Data.MySqlClient;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
+using System.Xml;
+using System.IO;
 
 namespace WowItemMaker2
 {
@@ -28,12 +30,30 @@ namespace WowItemMaker2
         public Window_Conn()
         {
             InitializeComponent();
+            // 字符编码选项
             DataTable dt = new DataTable();
             dt.Columns.Add("charset");
             dt.Rows.Add(new object[] { "gbk" });
             dt.Rows.Add(new object[] { "utf8" });
             CB_charset.DisplayMemberPath = "charset";
             CB_charset.ItemsSource = dt.DefaultView;
+            // 字段配置选项
+            string[] configFileArr = Configuration.getConfigFileList();
+            dt = new DataTable();
+            dt.Columns.Add("name");
+            foreach (string fileName in configFileArr)
+            {
+                dt.Rows.Add(new object[] { fileName });
+            }
+            CB_configFile.DisplayMemberPath = "name";
+            CB_configFile.ItemsSource = dt.DefaultView;
+            CB_configFile.Text = configFileArr.Length > 0 ? configFileArr[0] : string.Empty;
+            // 加载保存的信息
+            try
+            {
+                this.loadConnInfoXml();
+            }
+            catch { }
         }
 
         private void btn_ok_Click(object sender, RoutedEventArgs e)
@@ -94,8 +114,13 @@ namespace WowItemMaker2
             btn_ok.IsEnabled = true;
             if (sender.GetType() == typeof(DBAccess))
             {
+                // 设置数据库字段配置文件
+                if (CB_configFile.Text != null && CB_configFile.Text != string.Empty)
+                    Configuration.setConfigFileName(CB_configFile.Text);
                 if (this.OnServerConnected != null)
                     this.OnServerConnected(sender, null);
+                // 保存连接信息
+                this.saveConnInfoXml();
                 this.Close();
             }
             else if (sender.GetType().BaseType == typeof(SystemException))
@@ -180,6 +205,86 @@ namespace WowItemMaker2
             t.IsBackground = true;
             t.Start(db);
             IMG_loading.Visibility = System.Windows.Visibility.Visible;
+        }
+        /// <summary>
+        /// 将连接信息保存到文件
+        /// </summary>
+        private void saveConnInfoXml()
+        {
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\Data\\ConnInfo.cfg";
+            try
+            {
+                if (File.Exists(filePath))
+                    File.Delete(filePath);
+                if (CB_saveInfo.IsChecked == true)
+                {
+                    string pwdEncrypted = string.Empty;
+                    if (TB_password.Password.Length > 0)
+                    {
+                        pwdEncrypted = Util.Encrypt(TB_password.Password);
+                    }
+                    XmlWriter xmlr = XmlWriter.Create(filePath);
+                    xmlr.WriteStartElement("WOWItemMaker");
+                    xmlr.WriteElementString("HostName", TB_host.Text.Trim());
+                    xmlr.WriteElementString("Port", TB_port.Text.Trim());
+                    xmlr.WriteElementString("UserName", TB_username.Text.Trim());
+                    xmlr.WriteElementString("Password", pwdEncrypted);
+                    xmlr.WriteElementString("DataBase", CB_database.Text.Trim());
+                    xmlr.WriteElementString("Charset", CB_charset.Text.Trim());
+                    xmlr.WriteElementString("ConfigFile", CB_configFile.Text.Trim());
+                    xmlr.WriteEndElement();
+                    xmlr.Flush();
+                    xmlr.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                log.warn("保存连接信息出错");
+                log.warn(e);
+            }
+        }
+        /// <summary>
+        /// 读取回显连接信息
+        /// </summary>
+        private void loadConnInfoXml()
+        {
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + "\\Data\\ConnInfo.cfg";
+            if (File.Exists(filePath))
+            {
+                XmlReader xmlr = XmlReader.Create(filePath);
+                xmlr.Read();
+                xmlr.ReadToNextSibling("WOWItemMaker");
+                xmlr.ReadToDescendant("HostName");
+                TB_host.Text = xmlr.ReadString();
+                xmlr.ReadToNextSibling("Port");
+                TB_port.Text = xmlr.ReadString();
+                xmlr.ReadToNextSibling("UserName");
+                TB_username.Text = xmlr.ReadString();
+                xmlr.ReadToNextSibling("Password");
+                string pwd = xmlr.ReadString();
+                if (pwd != string.Empty)
+                {
+                    try
+                    {
+                        pwd = Util.Decrypt(pwd);
+                    }
+                    catch(Exception e)
+                    {
+                        pwd = string.Empty;
+                        log.warn("解析密码出错");
+                        log.warn(e);
+                    }
+                }
+                TB_password.Password = pwd;
+                xmlr.ReadToNextSibling("DataBase");
+                CB_database.Text = xmlr.ReadString();
+                xmlr.ReadToNextSibling("Charset");
+                CB_charset.Text = xmlr.ReadString();
+                xmlr.ReadToNextSibling("ConfigFile");
+                CB_configFile.Text = xmlr.ReadString();
+                xmlr.Close();
+                CB_saveInfo.IsChecked = true;
+            }
         }
 
     }

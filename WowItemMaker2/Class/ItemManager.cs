@@ -13,6 +13,9 @@ namespace WowItemMaker2
         private Logger log = new Logger(typeof(ItemManager));
         private string tableName;
         private string idField;
+        private string nameField;
+        private string classField;
+        private string subclassField;
         private DBAccess _db;
         private ItemProperty[] itemProperties;
 
@@ -41,6 +44,19 @@ namespace WowItemMaker2
         public ItemManager(DBAccess db)
         {
             this._db = db;
+            this.updateConfig();
+        }
+        /// <summary>
+        /// 更新字段配置
+        /// </summary>
+        private void updateConfig()
+        {
+            this.tableName = Configuration.getItemTableName();
+            this.idField = Configuration.getIdFieldName();
+            this.nameField = Configuration.getNameFieldName();
+            this.classField = Configuration.getClassFieldName();
+            this.subclassField = Configuration.getSubClassFieldName();
+            this.itemProperties = Configuration.getItemProperties();
         }
 
         public void addItem(Item item)
@@ -136,7 +152,7 @@ namespace WowItemMaker2
                     appendWhere = true;
                     sb.Append("WHERE ");
                 }
-                sb.Append("class='" + type + "' ");
+                sb.Append(this.classField + "='" + type + "' ");
             }
             if (subType != null)
             {
@@ -147,7 +163,7 @@ namespace WowItemMaker2
                     appendWhere = true;
                     sb.Append("WHERE ");
                 }
-                sb.Append("subclass='" + subType + "' ");
+                sb.Append(this.subclassField + "='" + subType + "' ");
             }
             if (name != null)
             {
@@ -158,7 +174,7 @@ namespace WowItemMaker2
                     appendWhere = true;
                     sb.Append("WHERE ");
                 }
-                sb.Append("name LIKE '%" + name.Replace("'", "''") + "%' ");
+                sb.Append(this.nameField + " LIKE '%" + name.Replace("'", "''") + "%' ");
             }
             sb.Append(" ORDER BY " + this.idField + " DESC LIMIT " + start + "," + limit);
             DataTable dt = this._db.query(sb.ToString());
@@ -227,7 +243,7 @@ namespace WowItemMaker2
                     appendWhere = true;
                     sb.Append("WHERE ");
                 }
-                sb.Append("class='" + type + "' ");
+                sb.Append(this.classField + "='" + type + "' ");
             }
             if (subType != null)
             {
@@ -238,7 +254,7 @@ namespace WowItemMaker2
                     appendWhere = true;
                     sb.Append("WHERE ");
                 }
-                sb.Append("subclass='" + subType + "' ");
+                sb.Append(this.subclassField + "='" + subType + "' ");
             }
             if (name != null)
             {
@@ -249,7 +265,7 @@ namespace WowItemMaker2
                     appendWhere = true;
                     sb.Append("WHERE ");
                 }
-                sb.Append("name LIKE '%" + name + "%' ");
+                sb.Append(this.nameField + " LIKE '%" + name + "%' ");
             }
             object obj = this._db.executeScalar(sb.ToString());
             if (obj != null)

@@ -18,5 +18,26 @@ namespace WowItemMaker2
             }
             return null;
         }
+        /// <summary>
+        /// AES加密字符串
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public static string Encrypt(string data)
+        {
+            byte[] bytes = AESHelper.AESEncrypt(Encoding.UTF8.GetBytes(data), GetCpuID(), string.Empty);
+            return Convert.ToBase64String(bytes);
+        }
+        /// <summary>
+        /// AES解密字符串
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public static string Decrypt(string data)
+        {
+            byte[] bytes = Convert.FromBase64String(data);
+            byte[] resultArr = AESHelper.AESDecrypt(bytes, GetCpuID(), string.Empty);
+            return Encoding.UTF8.GetString(resultArr);
+        }
     }
 }
